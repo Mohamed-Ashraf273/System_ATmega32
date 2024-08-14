@@ -57,8 +57,8 @@ int main(){
 	uart_init();// initializing uart
 	ADC_init();//initializing adc
 	motor_init();//initializing motor
-	Timer1_Init();
-	Servo_Init();
+	Timer1_Init();//initializing Timer
+	Servo_Init(); // initializing Servo
 	DIO_vSetPinDirection('A',BUZZER,1);//set buzzer as output
 	u8 Temprature = checkMessage(uart_receive());//read temp and check if the message is not to shutdown
 	u8 pot = ADC_read(POT_PIN);//read potentiometer
